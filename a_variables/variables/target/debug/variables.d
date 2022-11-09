@@ -1,0 +1,1 @@
+C:\Users\asvedin\dev\rust-tutorial\ultimate_rust_crash_course\exercise\a_variables\variables\target\debug\variables.exe: C:\Users\asvedin\dev\rust-tutorial\ultimate_rust_crash_course\exercise\a_variables\variables\src\main.rs

@@ -1,0 +1,1 @@
+C:\Users\asvedin\dev\rust-tutorial\ultimate_rust_crash_course\exercise\b_functions\target\debug\b_functions.exe: C:\Users\asvedin\dev\rust-tutorial\ultimate_rust_crash_course\exercise\b_functions\src\main.rs
