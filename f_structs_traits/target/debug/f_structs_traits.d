@@ -1,0 +1,1 @@
+C:\Users\asvedin\dev\rust-tutorial\ultimate_rust_crash_course\exercise\f_structs_traits\target\debug\f_structs_traits.exe: C:\Users\asvedin\dev\rust-tutorial\ultimate_rust_crash_course\exercise\f_structs_traits\src\main.rs
