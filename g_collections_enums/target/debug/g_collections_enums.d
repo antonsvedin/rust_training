@@ -1,0 +1,1 @@
+C:\Users\asvedin\dev\rust-tutorial\ultimate_rust_crash_course\exercise\g_collections_enums\target\debug\g_collections_enums.exe: C:\Users\asvedin\dev\rust-tutorial\ultimate_rust_crash_course\exercise\g_collections_enums\src\main.rs

@@ -8,6 +8,12 @@
 // - `Hit`, containing the distance from the center (an f64)
 // - `Miss`
 //
+#[derive(Debug)]
+pub enum Shot {
+    Bullseye,
+    Hit(f64),
+    Miss,
+}
 // You will need to complete 1b as well before you will be able to run this program successfully.
 
 impl Shot {
@@ -18,6 +24,11 @@ impl Shot {
         // - return 2 points if `self` is a `Shot::Hit(x)` where x < 3.0
         // - return 1 point if `self` is a `Shot::Hit(x)` where x >= 3.0
         // - return 0 points if `self` is a Miss
+        match self {
+            Shot::Miss => 0,
+            Shot::Bullseye => 5,
+            Shot::Hit(x) =>  if x < 3.0 { 2 } else { 1 },
+        }
     }
 }
 
@@ -28,6 +39,15 @@ fn main() {
 
     // 2. For each coord in arrow_coords:
     //
+    for coord in arrow_coords {
+        if Coord::distance_from_center(&coord) < 1.0 {
+            shots.push(Shot::Bullseye)
+        } else if Coord::distance_from_center(&coord) < 5.0 {
+            shots.push(Shot::Hit(Coord::distance_from_center(&coord)))
+        } else {
+            shots.push(Shot::Miss)
+        }
+    }
     //   A. Call `coord.print_description()`
     //   B. Append the correct variant of `Shot` to the `shots` vector depending on the value of
     //   `coord.distance_from_center()`
@@ -37,6 +57,20 @@ fn main() {
 
 
     let mut total = 0;
+    for shot in shots {
+        match shot {
+            Shot::Bullseye => total += 5,
+            Shot::Hit(x) => {
+                if x < 3.0 {
+                    total += 2
+                } else {
+                    total += 1
+                }
+            },
+            Shot::Miss => total = total,
+        }
+    }
+    
     // 3. Finally, loop through each shot in shots and add its points to total
 
     println!("Final point total is: {}", total);
